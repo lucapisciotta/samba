@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/lucapisciotta/samba)
 ------------------------
 [Samba](https://www.samba.org/) is the standard Windows interoperability suite of programs for Linux and Unix.
-With this image you will have a simple network share reachable from Windows, Linux and OSX machiens.
+With this image you will have a simple network share reachable from Windows, Linux and OSX machines.
 
 The image is based on the official alpine 3.15 and the offical samba package that you can find in the alpine repository.
 
