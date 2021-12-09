@@ -29,12 +29,6 @@ services:
     samba:
         image: lucapisciotta/samba
         container_name: samba
-        healthcheck:
-            test: if [ "$$(smbclient -L \\localhost -N -g | wc -l)" -gt 2 ]; then echo "OK"; else exit 1 ;fi
-            interval: 1m
-            timeout: 10s
-            retries: 3
-            start_period: 60s
         volumes:
             - /path/to/your/local/files/:/media/storage
             - /path/to/your/custom/smb.conf:/etc/samba  # Optional
