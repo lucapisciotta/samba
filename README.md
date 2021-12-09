@@ -4,8 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/lucapisciotta/samba)
 ------------------------
 [Samba](https://www.samba.org/) is the standard Windows interoperability suite of programs for Linux and Unix.
-With this image you will have a simple network share reachable from Windows and Linux machines.
-
+With this image you will have a simple network share reachable from Windows, OSX and Linux machines.
 
 
 The image is based on the official ubuntu:21.04 and the offical samba package that you can find in the ubuntu repository.
@@ -58,8 +57,6 @@ Container images are configured using parameters passed at runtime (such as thos
 |`-e TZ=Europe/Rome` |	Specify a timezone to use EG Europe/Rome. |
 |`-v /path/to/your/local/files/:/media/storage` | Where your preexisting files are located. |
 
-### Known problems
-Actually seems there is a problem to connect the share from OSX client
 
 ### Sources
 ------------------------
