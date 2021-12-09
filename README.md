@@ -4,9 +4,11 @@
 ![GitHub](https://img.shields.io/github/license/lucapisciotta/samba)
 ------------------------
 [Samba](https://www.samba.org/) is the standard Windows interoperability suite of programs for Linux and Unix.
-With this image you will have a simple network share reachable from Windows, Linux and OSX machines.
+With this image you will have a simple network share reachable from Windows and Linux machines.
 
-The image is based on the official alpine 3.15 and the offical samba package that you can find in the alpine repository.
+
+
+The image is based on the official ubuntu:21.04 and the offical samba package that you can find in the ubuntu repository.
 
 ### Supported architectures
 ------------------------
@@ -29,6 +31,8 @@ services:
     samba:
         image: lucapisciotta/samba
         container_name: samba
+        environment:
+            - TZ=Europe/Rome
         volumes:
             - /path/to/your/local/files/:/media/storage
             - /path/to/your/custom/smb.conf:/etc/samba  # Optional
@@ -50,8 +54,12 @@ docker run -d \
 Container images are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate <external>:<internal> respectively. For example, -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080 outside the container.
 | Parameter | Function |
 | :---: | :---: |
-|`-p 445:445` | SMB port |
+|`-p 445:445` | SMB port. |
+|`-e TZ=Europe/Rome` |	Specify a timezone to use EG Europe/Rome. |
 |`-v /path/to/your/local/files/:/media/storage` | Where your preexisting files are located. |
+
+### Known problems
+Actually seems there is a problem to connect the share from OSX client
 
 ### Sources
 ------------------------

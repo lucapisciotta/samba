@@ -11,6 +11,8 @@ RUN set -ue \
     ; apt-get install -y \
         libjansson4 \
         samba \
+        smbclient \
+        cifs-utils \
     ; mkdir /media/storage \
     ; chmod 0777 /media/storage \
 ;
