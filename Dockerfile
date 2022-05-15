@@ -1,6 +1,5 @@
 FROM ubuntu:21.04
 
-ARG EXTRA_PID
 ARG TZ=Europe/Rome
 ENV TZ=${TZ}
 ENV DEBIAN_FRONTEND=noninteractive
@@ -23,6 +22,4 @@ COPY ./smb.conf /etc/samba/smb.conf
 EXPOSE 445/tcp
 EXPOSE 139
 
-COPY entrypoint.sh /srv
-
-ENTRYPOINT [ "/srv/entrypoint.sh" ]
+ENTRYPOINT ["smbd", "-F", "--no-process-group", "-S"]

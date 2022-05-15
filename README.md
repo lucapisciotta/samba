@@ -43,7 +43,6 @@ services:
 ```
 docker run -d \
     --name=samba \
-    -e EXTRA_PID=1000 \
     -p 445:445 \
     -p 139:139 \
     -v /path/to/your/local/files/:/media/storage \
@@ -55,7 +54,6 @@ docker run -d \
 Container images are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate <external>:<internal> respectively. For example, -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080 outside the container.
 | Parameter | Function |
 | :---: | :---: |
-|`-e EXTRA_PID=1000` | A PID to define an extra user and fix some permissions issues. |
 |`-p 445:445` | SMB port. |
 |`-p 139:139` | NetBIOS port. |
 |`-e TZ=Europe/Rome` |	Specify a timezone to use EG Europe/Rome. |
