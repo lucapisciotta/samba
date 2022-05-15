@@ -23,6 +23,6 @@ COPY ./smb.conf /etc/samba/smb.conf
 EXPOSE 445/tcp
 EXPOSE 139
 
-COPY entrypoint /srv
+COPY entrypoint.sh /srv
 
 ENTRYPOINT [/srv/entrypoint.sh]
