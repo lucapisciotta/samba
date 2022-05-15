@@ -25,4 +25,4 @@ EXPOSE 139
 
 COPY entrypoint.sh /srv
 
-ENTRYPOINT [/srv/entrypoint.sh]
+ENTRYPOINT [ "/srv/entrypoint.sh" ]
