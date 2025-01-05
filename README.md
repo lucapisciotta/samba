@@ -1,5 +1,6 @@
+**NOTE**: _This repository is no longer supported or updated. If you wish to continue to develop this code yourself, I recommend you fork it._</code>
+
 # lucapisciotta/samba
-[![CI](https://github.com/lucapisciotta/samba/actions/workflows/main.yml/badge.svg)](https://github.com/lucapisciotta/samba/actions/workflows/main.yml)
 ![Docker Pulls](https://img.shields.io/docker/pulls/lucapisciotta/samba)
 ![GitHub](https://img.shields.io/github/license/lucapisciotta/samba)
 ------------------------
